@@ -1,9 +1,10 @@
 <?php
 /*
- * WP Photo Sphere v3.1
+ * WP Photo Sphere Smooth
  * http://jeremyheleine.me/#wp-photo-sphere
  *
  * Copyright (c) 2013-2015 Jérémy Heleine
+ * Copyright (c) 2015 Allen Lew
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -25,12 +26,12 @@
  */
 
 /*
-Plugin Name: WP Photo Sphere
+Plugin Name: WP Photo Sphere Smooth
 Plugin URI: http://jeremyheleine.me/#wp-photo-sphere
-Description: A filter that displays 360×180 degree panoramas. Please read the readme file for instructions.
-Version: 3.1
-Author: Jérémy Heleine
-Author URI: http://jeremyheleine.me
+Description: A filter that displays 360×180 degree panoramas, but faster. Please read the readme file for instructions.
+Version: 1.0
+Author: Allen Lew
+Author URI: http://allen.alew.org
 Text Domain: wp-photo-sphere
 Domain Path: /lang/
 License: MIT
@@ -62,10 +63,15 @@ register_deactivation_hook(__FILE__, 'wpps_deactivation');
 
 function wpps_register_scripts() {
 	wp_register_script('wpps-three', plugin_dir_url(__FILE__) . 'lib/three.min.js', array(), '1.0', true);
-	wp_register_script('wpps-psv', plugin_dir_url(__FILE__) . 'lib/photo-sphere-viewer.js', array('wpps-three'), '2.0.1', true);
+	wp_register_script('wpps-psv', plugin_dir_url(__FILE__) . 'lib/photo-sphere-viewer.min.js', array('wpps-three'), '3.0.1', true);
 	wp_register_script('wp-photo-sphere', plugin_dir_url(__FILE__) . 'wp-photo-sphere.js', array('jquery', 'wpps-psv'), '2.1', true);
 }
 add_action('plugins_loaded', 'wpps_register_scripts');
+
+function wpps_register_styles() {
+	wp_register_style('wpps-psv-css', plugin_dir_url(__FILE__) . 'lib/photo-sphere-viewer.min.css', array(), '1.0', true);
+}
+add_action('plugins_loaded', 'wpps_register_styles');
 
 function wpps_enqueue_admin_scripts() {
 	if (floatval(get_bloginfo('version')) >= 3.5)
@@ -139,6 +145,7 @@ function wpps_shortcode_attributes($atts) {
 
 function wpps_handle_shortcode($atts) {
 	wp_enqueue_script('wp-photo-sphere');
+	wp_enqueue_style('wpps-psv-css');
 	$settings = get_option('wpps_settings');
 
 	// Attributes
@@ -202,7 +209,7 @@ function wpps_handle_shortcode($atts) {
 add_shortcode('sphere', 'wpps_handle_shortcode');
 
 function wpps_create_menu() {
-	add_options_page('WP Photo Sphere', 'WP Photo Sphere', 'manage_options', __FILE__, 'wpps_options_page');
+	add_options_page('WP Photo Sphere Smooth', 'WP Photo Sphere Smooth', 'manage_options', __FILE__, 'wpps_options_page');
 	add_action('admin_init', 'wpps_register_settings');
 }
 add_action('admin_menu', 'wpps_create_menu');
@@ -214,7 +221,7 @@ function wpps_register_settings() {
 function wpps_options_page() {
 	?>
 	<div class="wrap">
-		<h2>WP Photo Sphere</h2>
+		<h2>WP Photo Sphere Smooth</h2>
 
 		<form method="post" action="options.php">
 			<?php
