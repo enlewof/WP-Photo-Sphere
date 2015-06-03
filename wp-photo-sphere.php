@@ -30,7 +30,7 @@ Plugin Name: WP Photo Sphere Smooth
 Plugin URI: http://jeremyheleine.me/#wp-photo-sphere
 Description: A filter that displays 360×180 degree panoramas, but now with a faster JS library. Please read the readme file for instructions.
 Version: 1.0
-Author: Allen Lew
+Author: Jérémy Heleine, Allen Lew
 Author URI: http://allen.alew.org
 Text Domain: wp-photo-sphere
 Domain Path: /lang/
