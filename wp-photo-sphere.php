@@ -28,7 +28,7 @@
 /*
 Plugin Name: WP Photo Sphere Smooth
 Plugin URI: http://jeremyheleine.me/#wp-photo-sphere
-Description: A filter that displays 360×180 degree panoramas, but faster. Please read the readme file for instructions.
+Description: A filter that displays 360×180 degree panoramas, but now with a faster JS library. Please read the readme file for instructions.
 Version: 1.0
 Author: Allen Lew
 Author URI: http://allen.alew.org
@@ -63,13 +63,15 @@ register_deactivation_hook(__FILE__, 'wpps_deactivation');
 
 function wpps_register_scripts() {
 	wp_register_script('wpps-three', plugin_dir_url(__FILE__) . 'lib/three.min.js', array(), '1.0', true);
-	wp_register_script('wpps-psv', plugin_dir_url(__FILE__) . 'lib/photo-sphere-viewer.min.js', array('wpps-three'), '3.0.1', true);
+	wp_register_script('wpps-three-canvas', plugin_dir_url(__FILE__) . 'lib/CanvasRenderer.js', array('wpps-three'), '1.0', true);
+	wp_register_script('wpps-three-projector', plugin_dir_url(__FILE__) . 'lib/Projector.js', array('wpps-three'), '1.0', true);
+	wp_register_script('wpps-psv', plugin_dir_url(__FILE__) . 'lib/photo-sphere-viewer.min.js', array('wpps-three', 'wpps-three-canvas','wpps-three-projector'), '3.0.1', true);
 	wp_register_script('wp-photo-sphere', plugin_dir_url(__FILE__) . 'wp-photo-sphere.js', array('jquery', 'wpps-psv'), '2.1', true);
 }
 add_action('plugins_loaded', 'wpps_register_scripts');
 
 function wpps_register_styles() {
-	wp_register_style('wpps-psv-css', plugin_dir_url(__FILE__) . 'lib/photo-sphere-viewer.min.css', array(), '1.0', true);
+	wp_register_style('wpps-psv-css', plugin_dir_url(__FILE__) . 'lib/photo-sphere-viewer.min.css', array(), '1.0', all);
 }
 add_action('plugins_loaded', 'wpps_register_styles');
 
@@ -144,8 +146,8 @@ function wpps_shortcode_attributes($atts) {
 }
 
 function wpps_handle_shortcode($atts) {
-	wp_enqueue_script('wp-photo-sphere');
 	wp_enqueue_style('wpps-psv-css');
+	wp_enqueue_script('wp-photo-sphere');
 	$settings = get_option('wpps_settings');
 
 	// Attributes

@@ -3,7 +3,7 @@
 WP Photo Sphere is a filter that allows you to display 360×180 degree panoramas. With WP Photo Sphere, your visitors will be able
 to navigate through your panoramas without install any plugin.
 
-WP Photo Sphere is based on the JavaScript library [Photo Sphere Viewer](http://jeremyheleine.me/#photo-sphere-viewer).
+WP Photo Sphere is based on the JavaScript library [Photo Sphere Viewer](https://mistic100.github.io/Photo-Sphere-Viewer/) by [Damien Sorel](http://www.strangeplanet.fr/), a fork of [Photo Sphere Viewer](http://jeremyheleine.me/#photo-sphere-viewer) by [Jérémy Heleine](http://jeremyheleine.me/).
 
 This plugin allows you to display equirectangular panoramas, taken with a classic camera or with Photo Sphere on Android and iOS.
 
@@ -23,7 +23,7 @@ Like any other plugin, copy the `wp-photo-sphere` folder to the `/wp-content/plu
 
 Use the `Add a panorama` button to upload or choose a panorama to insert into your post.
 
-Since version 3.1, it is possible to read a distant panorama located on another website thanks to its URL. To do that, do not
+Since version 1.0, it is possible to read a distant panorama located on another website thanks to its URL. To do that, do not
 indicate any ID number and use the `url` attribute. Note that this feature does not work with domains that did not enable CORS.
 For example: `[sphere url="http://upload.wikimedia.org/wikipedia/commons/a/a4/Cascading_Milky_Way.jpg"]`.
 

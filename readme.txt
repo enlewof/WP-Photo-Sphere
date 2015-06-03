@@ -1,5 +1,5 @@
 === WP Photo Sphere ===
-Contributors: Jeremy Heleine
+Contributors: Jeremy Heleine, Allen Lew
 Tags: Google, Android, Photo Sphere, photos, panoramas, 360-degree, equirectangular
 Requires at least: 3.1
 Tested up to: 4.2.1
@@ -14,7 +14,7 @@ A filter that displays 360x180 degree panoramas.
 WP Photo Sphere is a filter that allows you to display 360x180 degree panoramas. With WP Photo Sphere, your visitors will be able
 to navigate through your panoramas without install any plugin.
 
-WP Photo Sphere is based on the JavaScript library [Photo Sphere Viewer](http://jeremyheleine.me/#photo-sphere-viewer).
+WP Photo Sphere is based on the JavaScript library [Photo Sphere Viewer](https://mistic100.github.io/Photo-Sphere-Viewer/) by [Damien Sorel](http://www.strangeplanet.fr/), a fork of [Photo Sphere Viewer](http://jeremyheleine.me/#photo-sphere-viewer) by [Jérémy Heleine](http://jeremyheleine.me/).
 
 This plugin allows you to display equirectangular panoramas, taken with a classic camera or with Photo Sphere on Android and iOS.
 
@@ -45,7 +45,7 @@ Use the `Add a panorama` button to upload or choose a panorama to insert into yo
 
 = Is it possible to read a distant panorama? =
 
-Since version 3.1, it is possible to read a distant panorama located on another website thanks to its URL. To do that, do not
+Since version 1.0, it is possible to read a distant panorama located on another website thanks to its URL. To do that, do not
 indicate any ID number and use the `url` attribute. Note that this feature does not work with domains that did not enable CORS.
 For example: `[sphere url="http://upload.wikimedia.org/wikipedia/commons/a/a4/Cascading_Milky_Way.jpg"]`.
 
@@ -102,106 +102,5 @@ also use the `min_fov` and `max_fov` attributes.
 
 == Changelog ==
 
-= 3.1 =
-* New url attribute
-* New title attribute
-* New min_fov and max_fov attributes
-* New minimal and maximal FOV options
-* The container does not take its maximal height while loading
-
-= 3.0.2 =
-* Portuguese translation updated
-
-= 3.0.1 =
-* Turkish translation added
-
-= 3.0 =
-* Equirectangular panoramas compatibility (not only Photo Sphere)
-* Navigation bar
-* XMP data attribute (to read them or not)
-* Portuguese language available
-
-= 2.4 =
-* You can set your own animation speed
-
-= 2.3.1 =
-* Bug fixed
-
-= 2.3 =
-* Panoramas are now mobile compatible
-* Spanish language available
-
-= 2.2 =
-* "Add a panorama" button now compatible with the visual editor
-
-= 2.1 =
-* Maximum width can be given
-* Autoload after 1 second
-
-= 2.0 =
-* New library
-* New "Add a panorama" button
-* New anim_after attribute
-* Scipts loaded only if necessary
-
-= 1.1.1 =
-* Nothing new, just an error in the readme file
-
-= 1.1 =
-* Autoload attribute
-
 = 1.0 =
-* First official release
-
-== Upgrade Notice ==
-
-= 3.1 =
-* New url attribute
-* New title attribute
-* New min_fov and max_fov attributes
-* New minimal and maximal FOV options
-* The container does not take its maximal height while loading
-
-= 3.0.2 =
-* Portuguese translation updated
-
-= 3.0.1 =
-* Turkish translation added
-
-= 3.0 =
-* Equirectangular panoramas compatibility (not only Photo Sphere)
-* Navigation bar
-* XMP data attribute (to read them or not)
-* Portuguese language available
-
-= 2.4 =
-* You can set your own animation speed
-
-= 2.3.1 =
-* Bug fixed
-
-= 2.3 =
-* Panoramas are now mobile compatible
-* Spanish language available
-
-= 2.2 =
-* "Add a panorama" button now compatible with the visual editor
-
-= 2.1 =
-* Maximum width can be given
-* Autoload after 1 second
-
-= 2.0 =
-* New library used: Photo Sphere Viewer
-* New "Add a panorama" button
-* New anim_after attribute
-* Scripts are now loaded only if necessary
-
-= 1.1.1 =
-* There was an error in the readme file...
-
-= 1.1 =
-* Autoload attribute
-
-= 1.0 =
-* First version
+* First version forked from version 3.1 of original
