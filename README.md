@@ -1,13 +1,13 @@
-# WP Photo Sphere
+# WP Photo Sphere Smooth
 
-WP Photo Sphere is a filter that allows you to display 360×180 degree panoramas. With WP Photo Sphere, your visitors will be able
+WP Photo Sphere Smooth is a filter that allows you to display 360×180 degree panoramas. With WP Photo Sphere, your visitors will be able
 to navigate through your panoramas without install any plugin.
 
-WP Photo Sphere is based on the JavaScript library [Photo Sphere Viewer](https://mistic100.github.io/Photo-Sphere-Viewer/) by [Damien Sorel](http://www.strangeplanet.fr/), a fork of [Photo Sphere Viewer](http://jeremyheleine.me/#photo-sphere-viewer) by [Jérémy Heleine](http://jeremyheleine.me/).
+WP Photo Sphere Smooth is based on the JavaScript library [Photo Sphere Viewer](https://mistic100.github.io/Photo-Sphere-Viewer/) by [Damien Sorel](http://www.strangeplanet.fr/), a fork of [Photo Sphere Viewer](http://jeremyheleine.me/#photo-sphere-viewer) by [Jérémy Heleine](http://jeremyheleine.me/).
 
 This plugin allows you to display equirectangular panoramas, taken with a classic camera or with Photo Sphere on Android and iOS.
 
-WP Photo Sphere is available in:
+WP Photo Sphere Smooth is available in:
 
 * English,
 * French,

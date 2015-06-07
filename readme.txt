@@ -1,4 +1,4 @@
-=== WP Photo Sphere ===
+=== WP Photo Sphere Smooth ===
 Contributors: Jeremy Heleine, Allen Lew
 Tags: Google, Android, Photo Sphere, photos, panoramas, 360-degree, equirectangular
 Requires at least: 3.1
@@ -11,20 +11,20 @@ A filter that displays 360x180 degree panoramas.
 
 == Description ==
 
-WP Photo Sphere is a filter that allows you to display 360x180 degree panoramas. With WP Photo Sphere, your visitors will be able
+WP Photo Sphere Smooth is a filter that allows you to display 360x180 degree panoramas. With WP Photo Sphere, your visitors will be able
 to navigate through your panoramas without install any plugin.
 
-WP Photo Sphere is based on the JavaScript library [Photo Sphere Viewer](https://mistic100.github.io/Photo-Sphere-Viewer/) by [Damien Sorel](http://www.strangeplanet.fr/), a fork of [Photo Sphere Viewer](http://jeremyheleine.me/#photo-sphere-viewer) by [Jérémy Heleine](http://jeremyheleine.me/).
+WP Photo Sphere Smooth is based on the JavaScript library [Photo Sphere Viewer](https://mistic100.github.io/Photo-Sphere-Viewer/) by [Damien Sorel](http://www.strangeplanet.fr/), a fork of [Photo Sphere Viewer](http://jeremyheleine.me/#photo-sphere-viewer) by [Jérémy Heleine](http://jeremyheleine.me/).
 
 This plugin allows you to display equirectangular panoramas, taken with a classic camera or with Photo Sphere on Android and iOS.
 
-If you want to contact me for any reason, feel free to email me at jeremy.heleine@gmail.com or contact me on:
+If you want to contact me for any reason, feel free to email me at allen@alew.org or contact me on:
 
-* Twitter: http://twitter.com/JeremyHeleine
-* Google+: https://plus.google.com/+JérémyHeleine
-* Facebook: https://www.facebook.com/jeremy.heleine
+* Twitter: https://twitter.com/enlewof
+* Google+: https://plus.google.com/+AllenLew09
+* Facebook: https://www.facebook.com/allenlew
 
-WP Photo Sphere is available in:
+WP Photo Sphere Smooth is available in:
 
 * English,
 * French,
