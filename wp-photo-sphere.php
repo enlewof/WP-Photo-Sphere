@@ -63,8 +63,8 @@ register_deactivation_hook(__FILE__, 'wpps_deactivation');
 
 function wpps_register_scripts() {
 	wp_register_script('wpps-three', plugin_dir_url(__FILE__) . 'lib/three.min.js', array(), '1.0', true);
-	wp_register_script('wpps-three-canvas', plugin_dir_url(__FILE__) . 'lib/canvasrenderer.js', array('wpps-three'), '1.0', true);
-	wp_register_script('wpps-three-projector', plugin_dir_url(__FILE__) . 'lib/projector.js', array('wpps-three'), '1.0', true);
+	wp_register_script('wpps-three-canvas', plugin_dir_url(__FILE__) . 'lib/CanvasRenderer.js', array('wpps-three'), '1.0', true);
+	wp_register_script('wpps-three-projector', plugin_dir_url(__FILE__) . 'lib/Projector.js', array('wpps-three'), '1.0', true);
 	wp_register_script('wpps-psv', plugin_dir_url(__FILE__) . 'lib/photo-sphere-viewer.min.js', array('wpps-three', 'wpps-three-canvas','wpps-three-projector'), '3.0.1', true);
 	wp_register_script('wp-photo-sphere', plugin_dir_url(__FILE__) . 'wp-photo-sphere.js', array('jquery', 'wpps-psv'), '2.1', true);
 }
